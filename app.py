@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-
+"""
+VPNGate 节点查看器 - 精简版
+功能：查看节点列表、速度/延迟/评分、下载 .ovpn 配置文件
+无 OpenVPN、无代理转发、无 tun 网卡
+"""
 from __future__ import annotations
 
 import base64
@@ -138,9 +142,8 @@ def load_auth() -> dict[str, str]:
         password = secrets.token_urlsafe(12)
         updated = True
         print(f"[认证] 随机生成密码: {password}", flush=True)
-    if not secret:
-        secret = secrets.token_urlsafe(10)
-        updated = True
+    # secret_path 禁用，Render 等云平台用根路径访问
+    secret = ""
 
     if updated and not (WEB_USERNAME and WEB_PASSWORD):
         write_json(AUTH_FILE, {
