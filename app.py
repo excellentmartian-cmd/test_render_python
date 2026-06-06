@@ -338,7 +338,7 @@ INDEX_HTML = r"""<!doctype html>
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>VPNGate 节点查看器</title>
+  <title>网络信息查看器</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
     :root{
@@ -441,7 +441,7 @@ INDEX_HTML = r"""<!doctype html>
         <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
       </svg>
     </div>
-    VPNGate 节点查看器
+    网络信息查看器
   </div>
   <div class="header-actions">
     <span id="fetch_status" style="font-size:12px;color:var(--text-secondary)"></span>
@@ -894,7 +894,7 @@ def main() -> None:
     ensure_dirs()
     auth = load_auth()
     secret = auth.get("secret_path", "")
-    print(f"[启动] VPNGate 节点查看器", flush=True)
+    print(f"[启动] 网络信息查看器", flush=True)
     print(f"[启动] 地址: http://{UI_HOST}:{UI_PORT}/{secret}/", flush=True)
     print(f"[启动] 账号: {auth['username']}", flush=True)
     print(f"[启动] 密码: {auth['password']}", flush=True)
