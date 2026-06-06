@@ -253,7 +253,7 @@ LOGIN_HTML = r"""<!doctype html>
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>VPNGate 节点查看器</title>
+  <title>网络信息查看器</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
     :root {
@@ -298,7 +298,7 @@ LOGIN_HTML = r"""<!doctype html>
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
     </svg>
   </div>
-  <h2>VPNGate 节点查看器</h2>
+  <h2>网络信息查看器</h2>
   <p class="subtitle">请输入管理账号和密码</p>
   <div class="form-group">
     <label>账号</label>
